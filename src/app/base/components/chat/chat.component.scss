@@ -1,0 +1,100 @@
+.chat{
+ &__container{
+  position: relative;
+  border: 2px solid rgb(191, 0, 255);
+  border-bottom: none;
+  border-radius: .5rem;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  min-height: calc(100vh - 136px);
+ }
+
+ &__header{
+  padding: 1rem;
+  border-bottom: 2px solid rgb(191, 0, 255);
+  background: linear-gradient(to bottom, rgb(191, 0, 255), rgb(255, 0, 255));
+  font-weight: 700;
+  font-size: 1.3rem;
+ }
+
+ &__body{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: auto;
+  height: calc(100vh - 192px);
+ }
+
+ &__form{
+  padding: .3rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  border: 2px solid rgb(191, 0, 255);
+  border-radius: .5rem;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+ }
+}
+
+.message{
+ display: flex;
+ flex-flow: column nowrap;
+ gap: .2rem;
+
+ &__user{
+  padding: 0 1rem;
+ }
+
+ &__content{
+  border-radius:.5rem;
+ }
+
+ &-emited{
+  text-align: right;
+
+  .message__content{
+   padding: .5rem;
+   background: linear-gradient(to bottom, rgb(191, 0, 255), rgb(255, 0, 255));
+  }
+ }
+
+ &-received{
+  text-align: left;
+
+  .message__content{
+   padding: .5rem;
+   background: rgb(83, 83, 83);
+  }
+ }
+}
+
+.form{
+ display: flex;
+ flex-flow: row nowrap;
+ justify-content: space-between;
+ gap: .2rem;
+
+ &__input{
+  flex: 1 1 auto;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: none;
+  color: #fff;
+  background-color: rgb(83, 83, 83);
+
+  &::placeholder{
+   font-weight: 700;
+  }
+ }
+ &__button{
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, rgb(191, 0, 255), rgb(255, 0, 255));
+  color: #fff;
+ }
+}

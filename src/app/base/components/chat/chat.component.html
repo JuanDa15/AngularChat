@@ -1,0 +1,25 @@
+<div class="chat__container">
+ <div class="chat__header">
+  Chat
+ </div>
+ <div class="chat__body" #chatBody>
+  <div class="message message-emited" *ngFor="let item of chats">
+   <div class="message__user">Juan David</div>
+   <div class="message__content">{{item.message}}</div>
+  </div>
+  <!-- <div class="message message-received">
+   <div class="message__user">Daniela</div>
+   <div class="message__content">Hi!!</div>
+  </div> -->
+ </div>
+ <div class="chat__form">
+  <form class="form" [formGroup]="messageForm">
+    <input type="text" class="form__input" placeholder="Say Hello!!" formControlName="message" (keyup.enter)="sendMessage()" #messageInput>
+   <button type="button" 
+           class="form__button"
+           (click)="sendMessage()">
+    <i class="fas fa-paper-plane"></i>
+   </button>
+  </form>
+ </div>
+</div>

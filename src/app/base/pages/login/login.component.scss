@@ -1,0 +1,50 @@
+.backgrond{
+ position: relative;
+ width: 100vw;
+ height: 100vh;
+}
+
+.login{
+
+ &__container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid rgb(255, 0, 255);
+  padding: 2rem;
+  border-radius: .5rem;
+  background: rgb(29, 29, 29);
+ }
+
+ &__title{
+  text-align: center;
+ }
+
+ &__description{
+  text-align: center;
+  margin: 1.5rem 0;
+ }
+ 
+ &__buttons{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1rem;
+
+  button{
+   font-size: 1.5rem;
+   color: #fff;
+   background: linear-gradient(to bottom, rgb(160, 0, 253) 0%,rgb(247, 0, 255) 100%);
+   border: none;
+   border-radius: .5rem;
+   padding: 1rem;
+   transition: .5s ease all;
+
+   &:hover{
+    background: #fff;
+    color: rgb(247, 0, 255);
+   }
+  }
+ }
+}
